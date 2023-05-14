@@ -3,7 +3,7 @@ package backtracking;
 import java.util.*;
 
 // nxn chess board place n queens no queens attacks each other
-public class nquuen {
+public class nqueen {
 
     public static void placeNqueen(int n) {
         int board[][] = new int[n][n];
