@@ -81,7 +81,7 @@ public class nquuen {
     }
 
     public static void main(String[] args) {
-        placeNqueen(5);
+        placeNqueen(4);
     }
 }
 // o/p
