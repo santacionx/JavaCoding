@@ -114,14 +114,14 @@ public class bst1 {
         int preorder[] = { 1, 2, 4, 5, 3 };
         node root = sortedtree(inorder, preorder);
         printk(root, 0, 2);
-        // print(root);
-        // System.out.println("searching for data ");
-        // node rootans = searchbtree(root, 0);
-        // if (rootans != null) {
-        // System.out.println("found at " + rootans.data);
-        // } else {
-        // System.out.println("not found! ");
-        // }
+        print(root);
+        System.out.println("searching for data ");
+        node rootans = searchbtree(root, 0);
+        if (rootans != null) {
+            System.out.println("found at " + rootans.data);
+        } else {
+            System.out.println("not found! ");
+        }
 
     }
 }
