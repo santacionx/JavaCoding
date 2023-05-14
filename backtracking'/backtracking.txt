@@ -1,0 +1,11 @@
+Backtracking : go end if no solution comeback like that concept
+
+pre requisite : recursion
+
+problems:
+    check path exist
+    get all paths
+    print all paths
+    array subset exist sum =x is present or not 
+    or get element subset exits 
+
