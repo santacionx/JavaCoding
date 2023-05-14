@@ -23,7 +23,7 @@ public class nqueen {
             }
             System.out.println();
         }
-        // check for all columns
+        // check for all columns 1. top 2. upper left - 3.  diagonal 
         // check is safe to place queen
         // place the queen and move to next row
         for (int j = 0; j < n; j++) {
@@ -41,13 +41,13 @@ public class nqueen {
     // checks to place the right place to place queen
     public static boolean isboardSafe(int board[][], int row, int col) {
         int n = board.length;
-        // side 1 (-x,-y)
+        // side 1 (-x,-y) upper left
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 1) {
                 return false;
             }
         }
-        // side1 down (x+1,y+1)
+        // side1 down (x+1,y+1) 
         for (int i = row + 1, j = col + 1; i < n && j < n; i++, j++) {
             if (board[i][j] == 1) {
                 return false;
@@ -59,7 +59,7 @@ public class nqueen {
                 return false;
             }
         }
-        // side2 down (x+1,y-1)
+        // side2 down (x+1,y-1) upper right
         for (int i = row + 1, j = col - 1; i < n && j >= 0; i++, j--) {
             if (board[i][j] == 1) {
                 return false;
