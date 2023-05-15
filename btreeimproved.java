@@ -109,7 +109,7 @@ public class btreeimproved {
     public static void main(String[] args) {
         node root = input();
         print(root);
-        balancedTrees(root)
+        balancedTrees(root);
         System.out.println(balancedTrees(root));
         // o(nh) worst n^2 / o(n)
         breturn ans = balanceTree(root);

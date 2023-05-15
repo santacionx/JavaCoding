@@ -23,17 +23,18 @@ public class btree {
                 System.out.println("enter the right child : " + parentData + " ");
             }
         }
-        Scanner sc = new Scanner(System.in);
-        int data = sc.nextInt();
-        if (data == -1) {
-            return null;
+        try (Scanner sc = new Scanner(System.in)) {
+            int data = sc.nextInt();
+            if (data == -1) {
+                return null;
+            }
+            node root = new node(data);
+            node leftc = input(false, data, true);
+            node rightc = input(false, data, false);
+            root.left = leftc;
+            root.right = rightc;
+            return root;
         }
-        node root = new node(data);
-        node leftc = input(false, data, true);
-        node rightc = input(false, data, false);
-        root.left = leftc;
-        root.right = rightc;
-        return root;
     }
 
     public static void print(node root) {
