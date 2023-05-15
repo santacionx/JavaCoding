@@ -73,11 +73,48 @@ public class hashmap<k, v> {
         // say a[0] contains no key or linked list then
         // create list/node attach newnode next the head
         // place this newnode into the a[0]
-
         head = bucket.get(BucketIndex);
         node<k, v> newnode = new node<>(key, value);
         newnode.next = head;
 
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public v removeKey(k key) {
+        int BucketIndex = getBucketIndex(key);
+        node<k, v> head = bucket.get(BucketIndex);
+        node<k, v> prev = null;
+        // array index
+        while (head != null) {
+            if (head.key.equals(key)) {
+                // if only 1 node
+                if (prev == null) {
+                    bucket.set(BucketIndex, head.next);
+                } else {
+                    prev.next = head.next;
+                    return head.value;
+                }
+            }
+            prev = head;
+            head = head.next;
+        }
+        return null;
+    }
+
+    public v GetValue(k key) {
+        int BucketIndex = getBucketIndex(key);
+        node<k, v> head = bucket.get(BucketIndex);
+        // array index
+        while (head != null) {
+            if (head.key.equals(key)) {
+                return head.value;
+            }
+            head = head.next;
+        }
+        return null;
     }
 
     public static void main(String[] args) {
